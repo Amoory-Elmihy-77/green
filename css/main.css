@@ -1,0 +1,150 @@
+:root{
+    --green: #0f8354;
+    --main-transition: 0.3s;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: var(--main-transition);
+}
+a:hover{
+    color: var(--green);
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav svg{
+    color: var(--green);
+}
+nav ul li{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    position: relative;
+}
+nav ul li:not(.active)::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--green);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: var(--main-transition);
+}
+nav ul li:not(.active):hover::after{
+    width: 100%;
+}
+nav ul a{
+    font-size: 19px;
+}
+nav ul .active{
+    color: var(--green);
+    border-bottom: 3px solid var(--green);
+}
+nav ul .active a{
+    color: var(--green);
+}
+nav button{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: var(--green);
+    color: var(--green);
+    background-color: white;
+    transition: var(--main-transition);
+}
+nav button:hover{
+    color: white;
+    background-color: var(--green);
+}
+
+.home{
+    text-align: center;
+    padding-top: 60px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        font-weight: bold;
+        font-size: 50px;
+        span{
+            color: var(--green);
+        }
+    }
+    p{
+        color: #868686;
+        font-size: 17px;
+        margin-top: 15px;
+    }
+    button{
+        margin-top: 40px;
+        color: white;
+        background-color: var(--green);
+        border: 2px solid var(--green);
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 10px 20px;
+        transition: var(--main-transition);
+        width: fit-content;
+    }
+    button:hover{
+        color: var(--green);
+        background-color: white;
+    }
+    .row{
+        background-color: var(--green);
+        min-height: 250px;
+        position: relative;
+        top: -130px;
+    }
+}
+
+.nums{
+    margin: -100px;
+    background-image: url(../images/dot-desktop-e7e5610575.svg);
+    background-size: cover;
+    h1{
+        font-weight: bold;
+    }
+    .row{
+        margin-top: 50px;
+        .col-3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                background-color: var(--green);
+                font-size: 55px;
+                font-weight: bold;
+                color: white;
+            }
+            h4{
+                margin-top: 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            p{
+                font-size: 18px;
+                color: #868686;
+            }
+        }
+    }
+}
